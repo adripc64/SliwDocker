@@ -1,4 +1,4 @@
-# SliwDocker 0.1
+# SliwDocker 1.0
 
 SliwDocker contiene los scripts necesarios para el despliegue de Sliw usando Docker.
 
@@ -11,11 +11,8 @@ Esta versión incluye los siguientes servicios:
 * Apache Apollo 1.7.1
 * Elasticsearch 1.7.5
 * Kibana 4.1
-
-Servicios pendientes de integrar:
-
-* SliwServer
-* SliwWebManager
+* SliwServer 1.0
+* SliwWebManager 1.0
 
 Cada servicio tiene su propia carpeta que contiene:
 

@@ -39,3 +39,21 @@ services:
       - elasticsearch-instance:elasticsearch
     depends_on:
       - elasticsearch-instance
+  webmanager-instance:
+    build: ./sliwwebmanager
+    image: sliw/webmanager:1.0
+    ports:
+      - "80:8080"
+    links:
+      - elasticsearch-instance:elasticsearch
+    depends_on:
+      - elasticsearch-instance
+  server-instance:
+    build: ./sliwserver
+    image: sliw/server:1.0
+    links:
+      - elasticsearch-instance:elasticsearch
+      - apache-apollo-instance:apache-apollo
+    depends_on:
+      - elasticsearch-instance
+      - apache-apollo-instance
