@@ -48,3 +48,12 @@ services:
       - elasticsearch-instance:elasticsearch
     depends_on:
       - elasticsearch-instance
+  server-instance:
+    build: ./sliwserver
+    image: sliw/server:1.0
+    links:
+      - elasticsearch-instance:elasticsearch
+      - apache-apollo-instance:apache-apollo
+    depends_on:
+      - elasticsearch-instance
+      - apache-apollo-instance
